@@ -1,23 +1,22 @@
 "use client";
+import styles from "./Stars.module.css";
 
 import { useRef, useEffect, useCallback } from "react";
 import { useMousePosition } from "@/utils/mouse";
 
-interface ParticlesProps {
-  className?: string;
+interface StarsProps {
   quantity?: number;
   staticity?: number;
   ease?: number;
   refresh?: boolean;
 }
 
-export default function Particles({
-  className = "",
+export default function Stars({
   quantity = 30,
   staticity = 50,
   ease = 50,
   refresh = false,
-}: ParticlesProps) {
+}: StarsProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null);
   const canvasContainerRef = useRef<HTMLDivElement>(null);
   const context = useRef<CanvasRenderingContext2D | null>(null);
@@ -50,7 +49,7 @@ export default function Particles({
       dy,
       magnetism,
     };
-  }, []); 
+  }, []);
 
   const drawCircle = useCallback(
     (circle: Circle, update = false) => {
@@ -144,7 +143,7 @@ export default function Particles({
     }
   }, [dpr]);
 
-  const drawParticles = useCallback(() => {
+  const drawStars = useCallback(() => {
     clearContext();
     const particleCount = quantity;
     for (let i = 0; i < particleCount; i++) {
@@ -155,8 +154,8 @@ export default function Particles({
 
   const initCanvas = useCallback(() => {
     resizeCanvas();
-    drawParticles();
-  }, [drawParticles, resizeCanvas]);
+    drawStars();
+  }, [drawStars, resizeCanvas]);
 
   const onMouseMove = useCallback(() => {
     if (canvasRef.current) {
@@ -230,7 +229,7 @@ export default function Particles({
   };
 
   return (
-    <div className={className} ref={canvasContainerRef} aria-hidden="true">
+    <div className={styles.stars} ref={canvasContainerRef} aria-hidden="true">
       <canvas ref={canvasRef} />
     </div>
   );
