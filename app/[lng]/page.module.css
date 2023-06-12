@@ -19,6 +19,8 @@
   padding: 0;
   display: flex;
   gap: 20px;
+  align-items: center;
+  color: var(--link-color);
 }
 
 .listLink {
@@ -26,6 +28,8 @@
 
   font-size: 0.8rem;
   line-height: 1.25rem;
+
+  transition-duration: 0.5s;
 }
 
 .listLink:hover {

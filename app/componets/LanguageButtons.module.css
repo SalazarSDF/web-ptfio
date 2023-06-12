@@ -1,0 +1,26 @@
+.lang {
+  font-size: 1rem;
+}
+
+.langButton {
+  background: none;
+  border: none;
+  border: 1px solid transparent;
+  cursor: pointer;
+  padding: 0.2rem;
+  color: inherit;
+  transition-duration: 0.5s;
+}
+
+.langButton:hover {
+  color: white;
+  border-bottom: 1px solid #fff;
+}
+
+.slesh {
+  cursor: default;
+}
+
+.langButton:active {
+  background: rgb(255 255 255 / 11%);
+}
