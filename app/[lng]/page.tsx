@@ -5,16 +5,16 @@ import LanguageButtons from "../componets/LanguageButtons";
 import { useTranslation } from "../i18n";
 
 const listItems = [
-  { name: "Home", href: "/" },
-  { name: "About", href: "/about" },
-  { name: "Projects", href: "/projects" },
+  { name: "home", href: "/" },
+  { name: "about", href: "/about" },
+  { name: "projects", href: "/projects" },
 ];
 export default async function Home({
   params: { lng },
 }: {
   params: { lng: string };
 }) {
-  const noStars = true;
+  const noStars = false;
   console.log("NO STARS:", noStars);
   const { t } = await useTranslation(lng, "translation");
   return (
@@ -24,7 +24,7 @@ export default async function Home({
           {listItems.map((el) => (
             <li key={el.name}>
               <Link className={styles.listLink} href={`${lng}/${el.href}`}>
-                {el.name}
+                {t(`${el.name}`)}
               </Link>
             </li>
           ))}

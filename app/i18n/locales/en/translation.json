@@ -1,4 +1,7 @@
 {
   "title": "Welcome",
-  "paragraph": " Hi, my name is Elijah, I'm frontend developer, it's my portfolio web-site where you can find my projects, and my current technology stack."
+  "paragraph": " Hi, my name is Elijah, I'm frontend developer, it's my portfolio web-site where you can find my projects, and my current technology stack.",
+  "home": "home",
+  "about": "about",
+  "projects": "projects"
 }
