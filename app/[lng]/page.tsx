@@ -14,7 +14,7 @@ export default async function Home({
 }: {
   params: { lng: string };
 }) {
-  const noStars = false;
+  const noStars = true;
   console.log("NO STARS:", noStars);
   const { t } = await useTranslation(lng, "translation");
   return (
@@ -33,7 +33,9 @@ export default async function Home({
           </li>
         </ul>
       </nav>
-      <h1 className={styles.heading}>{t("title")}</h1>
+      <div className={styles.headingWrapper}>
+        <h1 className={styles.heading}>{t("title")}</h1>
+      </div>
       <p className={styles.paragraph}>{t("paragraph")}</p>
       {noStars ? "" : <Stars quantity={200} refresh={true} />}
     </div>

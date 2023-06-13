@@ -36,6 +36,11 @@
   color: white;
 }
 
+.headingWrapper {
+  @media (max-width: 56.5em) {
+    max-width: 400px;
+  }
+}
 .heading {
   font-size: 5rem;
   line-height: 1;
