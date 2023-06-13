@@ -1,3 +1,26 @@
-.jopa {
+.aboutContainer {
   background: rgb(24 24 27);
+  background-image: linear-gradient(to top left, #0f0f11, #1d1d1e);
+}
+
+.header {
+  height: 4rem;
+  margin: 0 auto;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navList {
+  display: flex;
+  gap: 2rem;
+}
+
+.parList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 0 2rem;
+  font-size: 1rem;
 }
