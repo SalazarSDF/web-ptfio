@@ -33,9 +33,7 @@ export default async function Home({
           </li>
         </ul>
       </nav>
-      <div className={styles.headingWrapper}>
-        <h1 className={styles.heading}>{t("title")}</h1>
-      </div>
+      <h1 className={styles.heading}>{t("title")}</h1>
       <p className={styles.paragraph}>{t("paragraph")}</p>
       {noStars ? "" : <Stars quantity={200} refresh={true} />}
     </div>
