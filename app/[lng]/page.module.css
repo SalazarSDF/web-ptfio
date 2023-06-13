@@ -49,6 +49,8 @@
   z-index: 10;
   -webkit-text-stroke: 1px hsla(0, 0%, 100%, 0.3);
   line-height: 1rem;
+  text-align: center;
+  text-wrap: wrap;
 
   @media only screen and (max-width: 50em) {
     font-size: 3rem;
