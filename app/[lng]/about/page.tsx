@@ -15,27 +15,48 @@ export default async function About({
 }) {
   const { t } = await useTranslation(lng, "about-page");
   const aboutInfo = t("about-info").split("|");
+  // <Link href={`/${lng}`}>Back</Link>
+
+  const JSXListItems = listItems.map((el) => {
+    const isAbout = el.name === "about";
+
+    return isAbout ? (
+      <li key={el.name}>
+        <span className={styles.aboutLink}>{t(`${el.name}`)}</span>
+      </li>
+    ) : (
+      <li key={el.name}>
+        <Link className={styles.listLink} href={`${lng}/${el.href}`}>
+          {t(`${el.name}`)}
+        </Link>
+      </li>
+    );
+  });
+  //TODO: ADD CONTACTS github linkedin e-mial
   return (
     <div className={styles.aboutContainer}>
-      <header className={styles.header}>
-        <nav>
-          <ul className={styles.navList}>
-            {listItems.map((el) => (
-              <li key={el.name}>
-                <Link href={`${lng}/${el.href}`}>{t(`${el.name}`)}</Link>
-              </li>
-            ))}
-          </ul>
+      <aside className={styles.aside}>
+        <nav className={styles.nav}>
+          <ul className={styles.navList}>{JSXListItems}</ul>
         </nav>
-      </header>
+      </aside>
 
-      <h1>{t("title")}</h1>
-      <Link href={`/${lng}`}>Back</Link>
-      <div className={styles.parList}>
-        {aboutInfo.map((el) => (
-          <p key={el}>{el}</p>
-        ))}
-      </div>
+      <main className={styles.main}>
+        <section className={styles.section}>
+          <h2 className={styles.title}>{t("title")}</h2>
+          <hr className={styles.hor} />
+
+          <div className={styles.parList}>
+            {aboutInfo.map((el) => (
+              <p key={el}>{el}</p>
+            ))}
+          </div>
+
+          <hr className={styles.hor} />
+          <h2 className={styles.title}>{t("contacts")}</h2>
+          <hr className={styles.hor} />
+        </section>
+      </main>
     </div>
   );
 }

@@ -1,26 +1,73 @@
 .aboutContainer {
-  background: rgb(24 24 27);
   background-image: linear-gradient(to top left, #0f0f11, #1d1d1e);
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  padding: 6rem 2rem;
+}
+.main {
+  font-family: var(--font-about);
+  color: var(--text-color);
 }
 
-.header {
-  height: 4rem;
-  margin: 0 auto;
-  background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.aside {
+  font-family: var(--font-base);
+}
+
+.nav {
+  position: sticky;
+  top: 3rem;
 }
 
 .navList {
+  list-style: none;
+  margin: 0;
+  padding: 0;
   display: flex;
-  gap: 2rem;
+  gap: 1rem;
+  flex-direction: column;
+}
+
+.listLink {
+  color: var(--link-color);
+  font-size: 1.3rem;
+  line-height: 1.25rem;
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 0.15s;
+  letter-spacing: -0.07rem;
+  padding: 0.3rem;
+}
+.listLink:hover {
+  color: white;
+}
+
+.aboutLink {
+  font-size: 1.3rem;
+  line-height: 1.25rem;
+  background-color: rgb(38 38 38);
+  padding: 0.3rem;
+  border-radius: 0.6rem;
+  cursor: default;
 }
 
 .parList {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
-  padding: 0 2rem;
-  font-size: 1rem;
+  gap: 2rem;
+  font-size: 1.2rem;
+}
+
+.section {
+}
+
+.title {
+  font-size: 3rem;
+  line-height: 2.5rem;
+}
+
+.hor {
+  border-color: var(--hor-color);
+
+  border-top-width: 1px;
+  margin: 3em 0;
 }

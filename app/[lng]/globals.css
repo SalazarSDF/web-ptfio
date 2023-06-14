@@ -1,6 +1,9 @@
 :root {
   --link-color: rgb(113 113 122);
   --font-base: "Inter", sans-serif;
+  --font-about: "Playfair Display", "Playfair", serif;
+  --text-color: rgb(229 229 229);
+  --hor-color: rgb(64 64 64);
 }
 *,
 *::before,
@@ -32,9 +35,6 @@ a {
 canvas {
   display: block;
   /* vertical-align: middle; */
-}
-h1 {
-  color: white;
 }
 
 button,
