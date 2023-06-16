@@ -1,7 +1,8 @@
 {
   "title": "About",
   "about-info": "As a frontend developer with a passion for creating beautiful and intuitive user interfaces, I have experience working with modern web technologies such as React, JavaScript, CSS, and Next.js. Though I may not have much commercial experience yet, I have honed my skills through personal projects and self-study. | In my projects, I've demonstrated proficiency in building responsive layouts and dynamic user interfaces, leveraging the latest features of React and its ecosystem. I'm also experienced in styling with CSS, using preprocessors like Sass to keep things organized and maintainable. | Recently, I've been exploring the world of server-side rendering with Next.js, which has opened up new possibilities for building fast and SEO-friendly web applications. I'm excited to continue learning and growing as a frontend developer, and look forward to contributing my skills to future projects.",
-  "contacts": "Contacts",
+  "links": "My links",
+  "tech": "My tech",
   "home": "home",
   "about": "about",
   "projects": "projects"

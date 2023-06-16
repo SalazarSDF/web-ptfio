@@ -4,13 +4,27 @@
   --font-about: "Playfair Display", "Playfair", serif;
   --text-color: rgb(229 229 229);
   --hor-color: rgb(64 64 64);
+  --backboreder-color: rgb(38 38 38);
+
+  --bp-large: 56.5em; /*  904px /16px */
+  --bp-medium: 50em; /* 800px / 16px = 50em; */
+  --bp-small: 46em; /* 736 / 16px = 46em */
+  --bp-smallest: 40em; /* 640px /16 */
 }
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+/*--bp-smallest: 40em; /* 640px /16 */
+@media only screen and (max-width: 40em) {
+  html {
+    font-size: 70%;
+  }
 }
 
 body {
@@ -21,10 +35,6 @@ body {
   box-sizing: border-box;
   background-color: rgba(0, 0, 0, 1);
   color: white;
-}
-
-body {
-  font-size: 62.5%; /* 10px/ 16px = 62.5% => 1rem = 10px; */
 }
 
 a {

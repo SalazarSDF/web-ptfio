@@ -52,6 +52,7 @@
   white-space: normal;
 }
 
+/* bp-large = 904px / 16px = 56.5em */
 @media only screen and (max-width: 56.5em) {
   .heading {
     font-size: 3rem;
@@ -69,6 +70,7 @@
   color: var(--link-color);
 }
 
+/* bp-medium = 800px / 16px = 50em; */
 @media only screen and (max-width: 50em) {
   .paragraph {
     font-size: 0.8rem;

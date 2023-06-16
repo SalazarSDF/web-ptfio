@@ -14,7 +14,7 @@ export default async function Home({
 }: {
   params: { lng: string };
 }) {
-  const noStars = true;
+  const noStars = false;
   console.log("NO STARS:", noStars);
   const { t } = await useTranslation(lng, "translation");
   return (
@@ -29,7 +29,7 @@ export default async function Home({
             </li>
           ))}
           <li>
-            <LanguageButtons />
+            <LanguageButtons language={lng} enHref="/en" ruHref="/ru" />
           </li>
         </ul>
       </nav>

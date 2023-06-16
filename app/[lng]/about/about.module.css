@@ -4,6 +4,15 @@
   grid-template-columns: 1fr 3fr;
   padding: 6rem 2rem;
 }
+
+/*--bp-small = 736 / 16px = 46em */
+@media only screen and (max-width: 46em) {
+  .aboutContainer {
+    grid-template-columns: 1fr;
+    padding: 2rem 2rem;
+  }
+}
+
 .main {
   font-family: var(--font-about);
   color: var(--text-color);
@@ -18,6 +27,14 @@
   top: 3rem;
 }
 
+/*--bp-small = 736 / 16px = 46em */
+@media only screen and (max-width: 46em) {
+  .nav {
+    position: initial;
+    margin-bottom: 2rem;
+  }
+}
+
 .navList {
   list-style: none;
   margin: 0;
@@ -25,6 +42,15 @@
   display: flex;
   gap: 1rem;
   flex-direction: column;
+  color: var(--link-color);
+}
+
+@media only screen and (max-width: 46em) {
+  .navList {
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .listLink {
@@ -44,10 +70,11 @@
 .aboutLink {
   font-size: 1.3rem;
   line-height: 1.25rem;
-  background-color: rgb(38 38 38);
+  background-color: var(--backboreder-color);
   padding: 0.3rem;
   border-radius: 0.6rem;
   cursor: default;
+  color: white;
 }
 
 .parList {
@@ -55,9 +82,7 @@
   flex-direction: column;
   gap: 2rem;
   font-size: 1.2rem;
-}
-
-.section {
+  margin-bottom: 3em;
 }
 
 .title {
@@ -70,4 +95,53 @@
 
   border-top-width: 1px;
   margin: 3em 0;
+}
+
+.contacts {
+  font-size: 2rem;
+  display: flex;
+  gap: 2rem;
+}
+
+.contactLink {
+  text-decoration: none;
+  color: var(--link-color);
+  border-radius: 0.6rem;
+}
+
+.contactLink:hover {
+  color: white;
+  background: var(--backboreder-color);
+}
+
+.svgContainer {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem;
+  border: 1px solid var(--backboreder-color);
+  border-radius: 0.6rem;
+}
+
+.linkText {
+  font-size: 1.5rem;
+}
+
+.techList {
+  font-size: 1.2rem;
+  margin-bottom: 3em;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 2rem;
+  margin-left: 1.25rem;
+}
+/* bp-large = 904px / 16px = 56.5em */
+@media only screen and (max-width: 56.5em) {
+  .techList {
+    grid-template-columns: 1fr;
+  }
+}
+
+.techItem {
+  margin-bottom: 0.7rem;
 }

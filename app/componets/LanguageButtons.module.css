@@ -12,6 +12,15 @@
   transition-duration: 0.5s;
 }
 
+.langButtonActive {
+  background: rgb(38 38 38);
+  /* border-radius: 0.6rem; */
+  padding: 0.3rem;
+  border-radius: 6px;
+  cursor: default;
+  color: white;
+}
+
 .langButton:hover {
   color: white;
   border-bottom: 1px solid #fff;
