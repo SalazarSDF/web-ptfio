@@ -25,10 +25,8 @@
 
 .listLink {
   color: var(--link-color);
-
   font-size: 0.8rem;
   line-height: 1.25rem;
-
   transition-duration: 0.5s;
 }
 

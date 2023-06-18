@@ -1,15 +1,8 @@
-import Link from "next/link";
 import { useTranslation } from "@/app/i18n";
 import styles from "./about.module.css";
-import LanguageButtons from "@/app/componets/LanguageButtons";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { MdMail } from "react-icons/md";
-
-const listItems = [
-  { name: "home", href: "/" },
-  { name: "about", href: "/about" },
-  { name: "projects", href: "/projects" },
-];
+import NavAside from "@/app/componets/NavAside";
 
 const techSkills = [
   "React (+ Hooks), Redux.",
@@ -35,37 +28,9 @@ export default async function About({
   const aboutInfo = t("about-info").split("|");
   // <Link href={`/${lng}`}>Back</Link>
 
-  const JSXListItems = listItems.map((el) => {
-    const isAbout = el.name === "about";
-
-    return isAbout ? (
-      <li key={el.name}>
-        <span className={styles.aboutLink}>{t(`${el.name}`)}</span>
-      </li>
-    ) : (
-      <li key={el.name}>
-        <Link className={styles.listLink} href={`${lng}/${el.href}`}>
-          {t(`${el.name}`)}
-        </Link>
-      </li>
-    );
-  });
   return (
     <div className={styles.aboutContainer}>
-      <aside className={styles.aside}>
-        <nav className={styles.nav}>
-          <ul className={styles.navList}>
-            {JSXListItems}{" "}
-            <li>
-              <LanguageButtons
-                language={lng}
-                ruHref="ru/about"
-                enHref="en/about"
-              />
-            </li>
-          </ul>
-        </nav>
-      </aside>
+      <NavAside active="about" lng={lng} />
 
       <main className={styles.main}>
         <section>
@@ -80,7 +45,9 @@ export default async function About({
           <hr className={styles.hor} />
           <ul className={styles.techList}>
             {techSkills.map((el) => (
-              <li className={styles.techItem}  key={el}>{el}</li>
+              <li className={styles.techItem} key={el}>
+                {el}
+              </li>
             ))}
           </ul>
 
@@ -117,4 +84,3 @@ export default async function About({
     </div>
   );
 }
-//MdMail
