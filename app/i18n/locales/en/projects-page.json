@@ -1,4 +1,5 @@
 {
   "title": "Projects",
-  "description": "Some of the projects are part of learning process, for example Song-Bird game was made to prepare for learn React, or Online-Store it's more about sorting, then styling."
+  "description": "Some of the projects are part of learning process, for example Song-Bird game was made to prepare for learn React, or Online-Store it's more about sorting, then styling.",
+  "online-zoo": "Learn css and DOM-tree, mostly interesting part was implement slider and randomly shuffle cards."
 }

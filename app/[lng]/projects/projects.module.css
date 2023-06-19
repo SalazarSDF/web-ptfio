@@ -5,7 +5,15 @@
   grid-template-columns: 1fr 3fr;
 }
 
-/* TODO: add to page */
+
+/*--bp-small = 736 / 16px = 46em */
+@media only screen and (max-width: 46em) {
+  .projectsContainer {
+    grid-template-columns: 1fr;
+    padding: 2rem 2rem;
+  }
+}
+
 .main {
   font-family: var(--font-about);
   color: var(--text-color);
@@ -16,13 +24,16 @@
 }
 
 .project {
+  display: flex;
+  flex-direction: column;
   text-decoration: none;
   color: var(--link-color);
   border: 1px solid var(--backboreder-color);
   border-radius: 0.6rem;
   padding: 0.5rem;
-  display: inline-block;
   flex: 1;
+  padding: 2rem;
+  margin-bottom: 1rem;
 }
 
 .project:hover {
@@ -33,8 +44,12 @@
   color: yellow;
 }
 
+.project:hover .projectArrow {
+  color: white;
+}
+
 .li {
-  display: flex;
+  margin-bottom: 4em;
 }
 
 .hor {
@@ -46,6 +61,7 @@
 .par {
   margin-top: 1em;
   color: var(--link-color);
+  font-size: 1.2rem;
 }
 
 .mainTitle {
@@ -62,9 +78,55 @@
   display: inline-block;
 }
 
+.projectHeading {
+  font-size: 2rem;
+}
+
 .projectName {
+  margin-top: 1rem;
   color: white;
+  font-family: var(--font-base);
 }
 
 .projectDescr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+}
+
+.projectSvg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+.projectArrow {
+  align-self: end;
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.svgContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.aditionLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.aditionLink {
+  border: 1px solid var(--backboreder-color);
+  border-radius: 0.6rem;
+  display: flex;
+  gap: 1rem;
+  padding: 0.5rem;
+  font-family: var(--font-base);
+  font-size: 1rem;
+  text-decoration: none;
+  color: var(--link-color);
+}
+
+.aditionLink:hover {
+  color: white;
+  background: var(--backboreder-color);
 }
