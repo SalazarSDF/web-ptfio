@@ -1,5 +1,9 @@
 {
   "title": "Projects",
   "description": "Some of the projects are part of learning process, for example Song-Bird game was made to prepare for learn React, or Online-Store it's more about sorting, then styling.",
-  "online-zoo": "Learn css and DOM-tree, mostly interesting part was implement slider and randomly shuffle cards."
+  "online-zoo": "Learn css and DOM-tree, mostly interesting part was implement slider and randomly shuffle cards.",
+  "gem-puzzle": "Learned some topics like: generating random numbers, shuffling arrays, handling mouse and keyboard events, as well as managing elements on the page.",
+  "song-bird": "Quiz game about birds, you need to guess the bird by singing. Trying to write a SPA application, without frameworks.",
+  "portfolio": "The website you're looking at",
+  "react-online-store": "SPA on React, different sorting methods and React context."
 }

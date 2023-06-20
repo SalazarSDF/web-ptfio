@@ -5,7 +5,6 @@
   grid-template-columns: 1fr 3fr;
 }
 
-
 /*--bp-small = 736 / 16px = 46em */
 @media only screen and (max-width: 46em) {
   .projectsContainer {
@@ -21,6 +20,10 @@
 
 .projectsList {
   list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1rem;
+  row-gap: 3rem;
 }
 
 .project {
@@ -30,18 +33,29 @@
   color: var(--link-color);
   border: 1px solid var(--backboreder-color);
   border-radius: 0.6rem;
-  padding: 0.5rem;
   flex: 1;
   padding: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 0.5rem;
 }
 
 .project:hover {
   background: var(--backboreder-color);
 }
 
-.project:hover .projectSvg {
+.project:hover .jsSvg {
   color: yellow;
+}
+
+.project:hover .reactSvg {
+  color: cyan;
+}
+
+.project:hover .gameSvg {
+  color: purple;
+}
+
+.project:hover .nextSvg {
+  color: white;
 }
 
 .project:hover .projectArrow {
@@ -49,7 +63,8 @@
 }
 
 .li {
-  margin-bottom: 4em;
+  display: flex;
+  flex-direction: column;
 }
 
 .hor {
@@ -94,10 +109,26 @@
   font-size: 1.2rem;
 }
 
-.projectSvg {
+.jsSvg {
   width: 1.5rem;
   height: 1.5rem;
 }
+
+.reactSvg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.gameSvg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.nextSvg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
 .projectArrow {
   align-self: end;
   width: 1.5rem;
