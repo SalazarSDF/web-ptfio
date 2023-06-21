@@ -26,6 +26,13 @@
   row-gap: 3rem;
 }
 
+/* --bp-large: 56.5em; /*  904px /16px */
+@media only screen and (max-width: 56.5em) {
+  .projectsList {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
 .project {
   display: flex;
   flex-direction: column;
