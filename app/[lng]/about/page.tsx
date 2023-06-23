@@ -65,7 +65,7 @@ export default async function About({
             </a>
             <a
               className={styles.contactLink}
-              href="https://www.linkedin.com/in/matias-elijah-71359327b"
+              href="https://www.linkedin.com/in/matias-ilya-170572280"
             >
               <div className={styles.svgContainer}>
                 <AiFillLinkedin />
