@@ -3,7 +3,7 @@ import { useTranslation } from "@/app/i18n";
 import NavAside from "@/app/componets/NavAside";
 import { FaJsSquare, FaReact, FaGamepad } from "react-icons/fa";
 import { BsArrowUpRight } from "react-icons/bs";
-import { SiNextdotjs } from "react-icons/si";
+import { SiNextdotjs, SiRedux } from "react-icons/si";
 
 const projectsArr = [
   {
@@ -54,6 +54,15 @@ const projectsArr = [
     gitLink: "https://github.com/SalazarSDF/web-ptfio",
     techStack: ["react", "next"],
   },
+  {
+    name: "React Posts",
+    date: "2023-07-17",
+    link: "https://wondrous-lebkuchen-411d41.netlify.app",
+    translateKey: "react-posts",
+    gitLink: "https://github.com/SalazarSDF/React_posts",
+    techTask: "https://github.com/SalazarSDF/React_posts",
+    techStack: ["react", "redux"],
+  },
 ];
 
 type project = {
@@ -100,6 +109,10 @@ function Projects({
           )}
           {project.techStack.includes("next") && (
             <SiNextdotjs className={styles.nextSvg} />
+          )}
+
+          {project.techStack.includes("redux") && (
+            <SiRedux className={styles.reduxSvg} />
           )}
 
           <BsArrowUpRight className={styles.projectArrow} />

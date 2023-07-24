@@ -36,6 +36,7 @@
 .project {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   text-decoration: none;
   color: var(--link-color);
   border: 1px solid var(--backboreder-color);
@@ -63,6 +64,10 @@
 
 .project:hover .nextSvg {
   color: white;
+}
+
+.project:hover .reduxSvg {
+  color: #ba8fff;
 }
 
 .project:hover .projectArrow {
@@ -132,6 +137,11 @@
 }
 
 .nextSvg {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.reduxSvg{
   width: 1.5rem;
   height: 1.5rem;
 }
