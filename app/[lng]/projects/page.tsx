@@ -1,69 +1,11 @@
 import styles from "./projects.module.css";
 import { useTranslation } from "@/app/i18n";
-import NavAside from "@/app/componets/NavAside";
+import NavAside from "@/app/components/NavAside";
 import { FaJsSquare, FaReact, FaGamepad } from "react-icons/fa";
 import { BsArrowUpRight } from "react-icons/bs";
 import { SiNextdotjs, SiRedux } from "react-icons/si";
+import { projectsList } from "./model";
 
-const projectsArr = [
-  {
-    name: "Online Zoo",
-    date: "2022-09-19",
-    link: "https://salazarsdf.github.io/online-zoo_layout-/dist/",
-    translateKey: "online-zoo",
-    figmaLink:
-      "https://www.figma.com/file/ypzT9idgAILaSRVRmDAJxn/online-zoo-3-weeks?type=design",
-    techTask:
-      "https://github.com/rolling-scopes-school/tasks/tree/master/stage1/stream2/online-zoo#%D0%BD%D0%B5%D0%B4%D0%B5%D0%BB%D1%8F-3",
-    gitLink: "https://github.com/SalazarSDF/online-zoo_layout-",
-    techStack: "js",
-  },
-  {
-    name: "Song Bird",
-    date: "2022-11-22",
-    link: "https://rolling-scopes-school.github.io/salazarsdf-JSFE2022Q3/song-bird/",
-    translateKey: "song-bird",
-    techTask:
-      "https://github.com/rolling-scopes-school/tasks/blob/master/tasks/songbird/songbird-2022q3.md",
-    techStack: ["js", "game"],
-  },
-  {
-    name: "Gem Puzzle",
-    date: "2022-10-18",
-    link: "https://rolling-scopes-school.github.io/salazarsdf-JSFE2022Q3/puzzle-game/",
-    translateKey: "gem-puzzle",
-    techTask:
-      "https://github.com/rolling-scopes-school/tasks/blob/master/tasks/stage-1/dom-api/codejam-the-gem-puzzle.md",
-    techStack: ["js", "game"],
-  },
-  {
-    name: "React Online Store",
-    date: "2023-03-29",
-    link: "https://scintillating-mochi-031dfe.netlify.app/",
-    translateKey: "react-online-store",
-    techTask:
-      "https://github.com/rolling-scopes-school/tasks/tree/master/tasks/online-store-team",
-    gitLink: "https://github.com/SalazarSDF/React_Online-Store",
-    techStack: "react",
-  },
-  {
-    name: "Portfolio",
-    date: "2023-06-08",
-    link: "https://github.com/SalazarSDF/web-ptfio",
-    translateKey: "portfolio",
-    gitLink: "https://github.com/SalazarSDF/web-ptfio",
-    techStack: ["react", "next"],
-  },
-  {
-    name: "React Posts",
-    date: "2023-07-17",
-    link: "https://wondrous-lebkuchen-411d41.netlify.app",
-    translateKey: "react-posts",
-    gitLink: "https://github.com/SalazarSDF/React_posts",
-    techTask: "https://github.com/SalazarSDF/React_posts",
-    techStack: ["react", "redux"],
-  },
-];
 
 type project = {
   name: string;
@@ -170,7 +112,7 @@ export default async function ProjectsPage({
         <hr className={styles.hor} />
         <section>
           <ul className={styles.projectsList}>
-            {projectsArr.map((el) => (
+            {projectsList.map((el) => (
               <Projects
                 key={el.link}
                 project={el}

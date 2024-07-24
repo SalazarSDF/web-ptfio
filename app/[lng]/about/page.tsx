@@ -2,7 +2,7 @@ import { useTranslation } from "@/app/i18n";
 import styles from "./about.module.css";
 import { AiFillGithub, AiFillLinkedin } from "react-icons/ai";
 import { MdMail } from "react-icons/md";
-import NavAside from "@/app/componets/NavAside";
+import NavAside from "@/app/components/NavAside";
 
 const techSkills = [
   "React (+ Hooks), Redux.",

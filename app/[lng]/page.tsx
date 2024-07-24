@@ -1,7 +1,7 @@
-import Stars from "../componets/Stars";
+import Stars from "../components/Stars";
 import Link from "next/link";
 import styles from "./page.module.css";
-import LanguageButtons from "../componets/LanguageButtons";
+import LanguageButtons from "../components/LanguageButtons";
 import { useTranslation } from "../i18n";
 
 const listItems = [
